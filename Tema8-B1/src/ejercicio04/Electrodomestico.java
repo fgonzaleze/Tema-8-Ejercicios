@@ -40,12 +40,12 @@ public class Electrodomestico {
 	}
 
 	/**
-	 * Constructor
+	 * Constructor electrodomestico
 	 * 
-	 * @param precio
-	 * @param peso
-	 * @param consum
-	 * @param col
+	 * @param precio parametro que contiene el precio del electrodomestico
+	 * @param peso parametro que contiene el peso del electrodomestico
+	 * @param consum parametro que contiene el consum del electrodomestico
+	 * @param col parametro que contiene el color del electrodomestico
 	 */
 	public Electrodomestico(double precio, double peso, String consum, String col) {
 		if (precio >= 0) {
@@ -77,20 +77,28 @@ public class Electrodomestico {
 	public color getCol() {
 		return gama;
 	}
-	
+	/**
+	 * Método que comprueba que la letra del consumo energético es correcta
+	 * @param letra
+	 * @return Devuelve un booleano true si la letra es correcta
+	 */
 	boolean comprobarConsumoEnergetico(char letra) {
 		boolean correcto = false;
-
+		// Las disttintas letras que pueden ser correctas
 		if (letra == 'A' || letra == 'B' || letra == 'C' || letra == 'D' || letra == 'E' || letra == 'F') {
 			correcto = true;
 		}
 
 		return correcto;
 	}
-	
+	/**
+	 * Método que comprueba si el color es correcto
+	 * @param color color que corresponde al electrodomestico
+	 * @return devuelve true si es correcto el color introducido
+	 */
 	boolean comprobarColor(String color) {
 		boolean correcto = false;
-
+		// If con los diferentes colores
 		if (color.equalsIgnoreCase("negro") || color.equalsIgnoreCase("gris") || color.equalsIgnoreCase("azul")
 				|| color.equalsIgnoreCase("rojo")) {
 			correcto = true;
@@ -98,7 +106,12 @@ public class Electrodomestico {
 
 		return correcto;
 	}
-	
+	/**
+	 * Metodo que calcula el precio final dependiendo del consumo y del peso. 
+	 * En caso del consumo: (A + 100€, B + 80€, C + 60€, D + 50€)
+	 * En caso del peso: (0 - 20kg + 10€, 20 - 50kg + 50€, 50 - 80kg + 80€, +100kg + 100€) 
+	 * @return Devuelve en double el precio final
+	 */
 	double precioFinal() {
 		double precio = 0;
 
