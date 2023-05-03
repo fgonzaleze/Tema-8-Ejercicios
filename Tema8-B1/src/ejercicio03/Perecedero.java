@@ -16,16 +16,23 @@ int diasACaducar;
 	public void setDiasACaducar(int diasACaducar) {
 		this.diasACaducar = diasACaducar;
 	}
-
+	
+	/**
+	 * Metodo para convertir a cadema los días a caducar
+	 */
 	@Override
 	public String toString() {
+		// Concatenamos en res el resultado 
 		String res = super.toString() + "\n";
 		res += "Días a caducar: " + diasACaducar;
 		return res;
 	}
 	
 	/**
-	 * Metodo para calcular la cantidad 
+	 * Metodo para calcular atendiendo a la fecha de caducidad
+	 * En caso de que sea 1 día el precio se reduce 4 veces
+	 * En caso de que sea 2 días el precio se reduce 3 veces
+	 * En caso de que sean 3 días el precio se reduce 2 veces
 	 */
 	@Override
 	public double calcular(int cantidad) {
@@ -41,7 +48,7 @@ int diasACaducar;
 			total /= 2;
 			break;
 		}
-			
+		// Devuelve el total calculado
 		return total;
 	}
 }

@@ -97,7 +97,7 @@ public class Electrodomestico {
 		return consum;
 	}
 	/**
-	 * getter del color
+	 * Getter del color
 	 * @return devuelve la gama (color)
 	 */
 	public color getCol() {
