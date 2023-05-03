@@ -1,20 +1,33 @@
 package ejercicio04;
-
+/**
+ * Superclase encargada de comprobar valores y calcular diferentes precios acorde a la gama.
+ * @author jgonzalez
+ *
+ */
 public class Electrodomestico {
-
+	/**
+	 * Precio, que por defecto será 100
+	 */
 	protected double precio = 100;
-
+	
+	// Enumerado para almacenar los colores
 	enum color {
 		blanco, negro, rojo, azul, gris
 	};
-
+	
+	// Enumerado con los tipos de consumo, de la A a la F
 	enum consumo {
 		A, B, C, D, E, F
 	};
-
+	/**
+	 * Peso, que por defecto será 5 kg
+	 */
 	double peso = 5;
-
+	
+	// Por defecto consumo será F
 	protected consumo consum = consumo.F;
+	
+	// Por defecto la gama(color) será gris
 	protected color gama = color.gris;
 
 	/*
@@ -61,30 +74,43 @@ public class Electrodomestico {
 			this.gama = color.valueOf(col);
 		}
 	}
-
+	/**
+	 * Getter para el precio
+	 * @return devolvemos el precio 
+	 */
 	public double getPrecio() {
 		return precio;
 	}
-
+	
+	/**
+	 * Getter para el peso
+	 * @return devuelve el peso
+	 */
 	public double getPeso() {
 		return peso;
 	}
-
+	/**
+	 * Getter para el consumo
+	 * @return devuelve el consumo
+	 */
 	public consumo getConsum() {
 		return consum;
 	}
-
+	/**
+	 * getter del color
+	 * @return devuelve la gama (color)
+	 */
 	public color getCol() {
 		return gama;
 	}
 	/**
 	 * Método que comprueba que la letra del consumo energético es correcta
-	 * @param letra
+	 * @param letra la letra correspondera al consumo 
 	 * @return Devuelve un booleano true si la letra es correcta
 	 */
 	boolean comprobarConsumoEnergetico(char letra) {
 		boolean correcto = false;
-		// Las disttintas letras que pueden ser correctas
+		// Las distintas letras que pueden ser correctas
 		if (letra == 'A' || letra == 'B' || letra == 'C' || letra == 'D' || letra == 'E' || letra == 'F') {
 			correcto = true;
 		}
@@ -103,7 +129,7 @@ public class Electrodomestico {
 				|| color.equalsIgnoreCase("rojo")) {
 			correcto = true;
 		}
-
+		
 		return correcto;
 	}
 	/**
@@ -114,7 +140,7 @@ public class Electrodomestico {
 	 */
 	double precioFinal() {
 		double precio = 0;
-
+		
 		switch (consum) {
 		case A:
 			precio = precio + 100;
@@ -148,8 +174,12 @@ public class Electrodomestico {
 		return precio;
 	}
 	
+	/**
+	 * Metodo toString para imprimir el resultado
+	 */
 	@Override
 	public String toString() {
+		// Lo guardaremos en una cadena para que devuelva la cadena en el return
 		String cadena = "";
 		
 		cadena = "Precio base: " +precio+" euros; \n"

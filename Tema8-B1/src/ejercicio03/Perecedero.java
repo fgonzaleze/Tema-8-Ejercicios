@@ -25,7 +25,7 @@ int diasACaducar;
 	}
 	
 	/**
-	 * 
+	 * Metodo para calcular la cantidad 
 	 */
 	@Override
 	public double calcular(int cantidad) {
