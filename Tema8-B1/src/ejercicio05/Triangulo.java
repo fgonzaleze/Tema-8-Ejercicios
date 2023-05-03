@@ -78,8 +78,10 @@ public class Triangulo extends Poligono {
 	@Override
 	public String toString() {
 		String res = "";
-		res += super.toString() + "Triangulo\n" + "Lado 1 : " + lado1 + "\n" + "Lado 2 : " + lado2 + "\n" + "Lado 3 : "
-				+ lado3 + "\n";
+		res += super.toString() + "Triángulo\n" + 
+				"Lado 1 : " + lado1 + "\n" + 
+				"Lado 2 : " + lado2 + "\n" + 
+				"Lado 3 : "	+ lado3 + "\n";
 		return res;
 	}
 

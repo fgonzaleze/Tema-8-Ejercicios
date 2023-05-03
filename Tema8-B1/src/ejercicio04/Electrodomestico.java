@@ -67,10 +67,10 @@ public class Electrodomestico {
 		if (peso > 0) {
 			this.peso = peso;
 		}
-		if (consum != null && consum.length() != 0) {
+		if (consum != null && consum != "") {
 			this.consum = consumo.valueOf(consum);
 		}
-		if (col != null && col.length() != 0) {
+		if (col != null && col != "") {
 			this.gama = color.valueOf(col);
 		}
 	}

@@ -10,7 +10,7 @@ public class NoPerecederos extends Productos{
 		 * String que almacena el tipo
 		 */
 		String tipo;
-		
+
 		/**
 		 * Constructor para los alimentos no perecederos
 		 * @param nombre Nombre del producto no perecedero

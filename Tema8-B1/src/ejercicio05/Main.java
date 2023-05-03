@@ -25,29 +25,29 @@ static Scanner lee = new Scanner(System.in);
 					listaPoligonos();
 					break;
 				case 4:
-					System.out.println("Ha salido del programa.");
+					System.out.println("Ha cerrado el programita.");
 					break;	
 				default:
-					System.err.println("Opcion no valida");
+					System.err.println("La opción elegida no se encuentra contemplada");
 					break;
 				}
 			}while(opcionUser!=4);
 		}
 		public static void menu() {
 			System.out.println("Seleccione una de las siguientes opciones: ");
-			System.out.println("1.Introducir un triangulo.");
-			System.out.println("2.Introducir un rectangulo");
-			System.out.println("3.Mostrar el contenido del array.");
-			System.out.println("4.Salir del programa.");
+			System.out.println("1. Introducir un triangulo.");
+			System.out.println("2. Introducir un rectangulo");
+			System.out.println("3. Mostrar el contenido del array.");
+			System.out.println("4. Salir del programa.");
 		}
 		public static void posicionAd() {
 			arrayPoligonos = Arrays.copyOf(arrayPoligonos, arrayPoligonos.length+1);
 		}
 		public static void triangulo() {
-			int cantLados=3;
-			double lado1=0;
-			double lado2=0;
-			double lado3=0;
+			int cantLados = 0;
+			double lado1;
+			double lado2;
+			double lado3;
 			
 			System.out.println("Por favor introduzca los valores de los lados del triangulo.");
 			System.out.print("Lado 1:");
